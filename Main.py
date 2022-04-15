@@ -1,4 +1,4 @@
-import unittest
+import unittest  # Import the testing framework
 import BowlingGame
 
 class TestBowlingGame(unittest.TestCase):
