@@ -1,0 +1,9 @@
+---- File to note down all code edits not relating to errors or bugs ----
+
+Refactor the order of all test case methods to match the testing plan.
+
+Edit both code files to adhere to the latest PEP standard, this included changing function and variable names to all lowercase
+
+Correct a misspelled function name strike_score in BowlingGame class
+
+Renamed method to test a game of spares to test_spare_game as it had the same name as the method to test only one spare
