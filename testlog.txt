@@ -1,3 +1,27 @@
 --------This is a text file containing all logged outputs from each individual test case method------
 
 
+Test case #1
+ Testing game with one strike....
+
+
+Error
+Traceback (most recent call last):
+    line 16, in test_one_strike
+    self.game.rolls(10)
+TypeError: 'list' object is not callable
+
+Solution:
+    Replaced all appending methods of each roll from self.game.rolls(x) to self.game.roll(x)
+    The program was trying to add the pins to the rolls list bypassing the created append method 'roll'
+
+
+Test case #1
+ Testing game with one strike....
+
+
+Failure
+Traceback (most recent call last):
+    line 20, in test_one_strike
+    assert self.game.score() == 24
+AssertionError

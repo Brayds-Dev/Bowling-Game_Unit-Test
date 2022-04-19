@@ -1,18 +1,22 @@
 import unittest  # Import the testing framework
-import BowlingGame
+import BowlingGame  # Import the BowlingGame class
 
 
 class TestBowlingGame(unittest.TestCase):
 
-    def set_up(self):
+    def setUp(self):
         self.game = BowlingGame.BowlingGame()
 
     def test_one_strike(self):
+        """
+        A method to test a game with one strike
+        :return:
+        """
         print("Test case #1\n Testing game with one strike....\n")
-        self.game.rolls(10)
-        self.game.rolls(4)
-        self.game.rolls(3)
-        self.roll_many(0, 16)
+        self.game.roll(10)
+        self.game.roll(4)
+        self.game.roll(3)
+        self.roll_many(0, 17)
         assert self.game.score() == 24
 
     def test_one_spare(self):
@@ -46,4 +50,4 @@ class TestBowlingGame(unittest.TestCase):
 
     def roll_many(self, pins, rolls):
         for i in range(rolls):
-            self.game.rolls(pins)
+            self.game.roll(pins)
