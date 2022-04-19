@@ -1,9 +1,7 @@
 --------This is a text file containing all logged outputs from each individual test case method------
 
-
 Test case #1
  Testing game with one strike....
-
 
 Error
 Traceback (most recent call last):
@@ -25,3 +23,110 @@ Traceback (most recent call last):
     line 20, in test_one_strike
     assert self.game.score() == 24
 AssertionError
+
+Solution:
+    1 - In Score function, inside the frame loop, changed the first if statement to check if the current roll was a strike
+    2 - Then the returned result needed to be moved to outside the for loop, as we only want to return the final result
+
+
+Ran 1 test in 0.002s
+
+OK
+
+Test case #1
+ Testing game with one strike....
+
+
+Process finished with exit code 0
+
+------------------------------------------------------------------------------------------------------
+
+Test case #2
+ Testing game with one spare....
+
+Ran 1 test in 0.005s
+
+FAILED (errors=1)
+
+Error
+Traceback (most recent call last):
+    line 24, in test_one_spare
+    self.game.rolls(5)
+TypeError: 'list' object is not callable
+
+Solution:
+    Replaced all appending methods of each roll from self.game.rolls(x) to self.game.roll(x)
+    The program was trying to add the pins to the rolls list bypassing the created append method 'roll'
+
+Ran 1 test in 0.002s
+
+OK
+Test case #2
+ Testing game with one spare....
+
+
+Process finished with exit code 0
+
+------------------------------------------------------------------------------------------------------
+
+Ran 1 test in 0.002s
+
+OK
+
+Test case #3
+ Testing game with each roll hitting one pin....
+
+
+Process finished with exit code 0
+
+------------------------------------------------------------------------------------------------------
+
+Ran 1 test in 0.004s
+
+FAILED (errors=1)
+Test case #4
+ Testing a gutter ball game....
+
+
+Error
+Traceback (most recent call last):
+    line 38, in test_gutter_game
+    self.game.rolls(0)
+TypeError: 'list' object is not callable
+
+Solution:
+    Replaced all appending methods of each roll from self.game.rolls(x) to self.game.roll(x)
+    The program was trying to add the pins to the rolls list bypassing the created append method 'roll'
+
+
+
+Ran 1 test in 0.002s
+
+OK
+Test case #4
+ Testing a gutter ball game....
+
+
+Process finished with exit code 0
+
+------------------------------------------------------------------------------------------------------
+
+Ran 1 test in 0.002s
+
+OK
+Test case #5
+ Testing a perfect game....
+
+
+Process finished with exit code 0
+
+------------------------------------------------------------------------------------------------------
+
+Ran 1 test in 0.002s
+
+OK
+Test case #6
+ Testing a game with all spares....
+
+
+Process finished with exit code 0

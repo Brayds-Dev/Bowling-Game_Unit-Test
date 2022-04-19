@@ -21,21 +21,21 @@ class TestBowlingGame(unittest.TestCase):
 
     def test_one_spare(self):
         print("Test case #2\n Testing game with one spare....\n")
-        self.game.rolls(5)
-        self.game.rolls(5)
-        self.game.rolls(3)
+        self.game.roll(5)
+        self.game.roll(5)
+        self.game.roll(3)
         self.roll_many(0, 17)
         assert self.game.score() == 16
 
     def test_all_ones(self):
-        print("Test case #3\n Testing game with each bowl hitting one pin....\n")
+        print("Test case #3\n Testing game with each roll hitting one pin....\n")
         self.roll_many(1, 20)
         assert self.game.score() == 20
 
     def test_gutter_game(self):
         print("Test case #4\n Testing a gutter ball game....\n")
         for i in range(0, 20):
-            self.game.rolls(0)
+            self.game.roll(0)
         assert self.game.score() == 0
 
     def test_perfect_game(self):
